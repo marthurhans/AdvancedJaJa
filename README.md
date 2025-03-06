@@ -32,3 +32,8 @@ Take this opportunity to create or add to a simple resume portfolio to highlight
 
 ### TASK B1
 Added resource bundles, multithreaded welcome message, backend endpoint, CORS config, frontend display, and css styling.  
+
+### TASK B2
+Added currency display for USD, CAD, and EUR to room listings.
+
+

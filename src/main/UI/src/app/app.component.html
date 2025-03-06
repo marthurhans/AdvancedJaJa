@@ -143,7 +143,12 @@
                   <td>
                     <strong>Room #: {{ room.roomNumber }}</strong
                     ><br />
-                    <strong>Price: ${{ room.price }}</strong>
+                    <div *ngFor="let code of currencyCodes">
+                      <strong
+                        >Price ({{ code }}):
+                        {{ room.price | currency : code }}</strong
+                      >
+                    </div>
                   </td>
                   <td>
                     <button

@@ -19,6 +19,7 @@ export class AppComponent implements OnInit{
 
   private baseURL:string='http://localhost:8080';
   public welcomeMessages: string[] = [];
+  public currencyCodes: string[] = ['USD', 'CAD', 'EUR'];
   private getUrl:string = this.baseURL + '/room/reservation/v1/';
   private postUrl:string = this.baseURL + '/room/reservation/v1';
   public submitted!:boolean;
