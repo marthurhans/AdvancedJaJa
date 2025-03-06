@@ -30,3 +30,5 @@ Take this opportunity to create or add to a simple resume portfolio to highlight
 ## TASK LISTS 
 >Task will be listed in this readme document as completed
 
+### TASK B1
+Added resource bundles, multithreaded welcome message, backend endpoint, CORS config, frontend display, and css styling.  

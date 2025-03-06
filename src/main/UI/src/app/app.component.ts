@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
   constructor(private httpClient:HttpClient){}
 
   private baseURL:string='http://localhost:8080';
-
+  public welcomeMessages: string[] = [];
   private getUrl:string = this.baseURL + '/room/reservation/v1/';
   private postUrl:string = this.baseURL + '/room/reservation/v1';
   public submitted!:boolean;
@@ -43,6 +43,10 @@ export class AppComponent implements OnInit{
     roomsearchValueChanges$.subscribe(x => {
       this.currentCheckInVal = x.checkin;
       this.currentCheckOutVal = x.checkout;
+    });
+    this.httpClient.get<string[]>('http://localhost:8080/api/welcome')
+    .subscribe(messages => {
+      this.welcomeMessages = messages;
     });
   }
 
