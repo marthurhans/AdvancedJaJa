@@ -20,6 +20,8 @@ export class AppComponent implements OnInit{
   private baseURL:string='http://localhost:8080';
   public welcomeMessages: string[] = [];
   public currencyCodes: string[] = ['USD', 'CAD', 'EUR'];
+  public timezones: any = {};
+
   private getUrl:string = this.baseURL + '/room/reservation/v1/';
   private postUrl:string = this.baseURL + '/room/reservation/v1';
   public submitted!:boolean;
@@ -37,7 +39,6 @@ export class AppComponent implements OnInit{
 
  //     this.rooms=ROOMS;
 
-
     const roomsearchValueChanges$ = this.roomsearch.valueChanges;
 
     // subscribe to the stream
@@ -45,7 +46,7 @@ export class AppComponent implements OnInit{
       this.currentCheckInVal = x.checkin;
       this.currentCheckOutVal = x.checkout;
     });
-    this.httpClient.get<string[]>('http://localhost:8080/api/welcome')
+    this.httpClient.get<string[]>(`${this.baseURL}/api/welcome`)
     .subscribe(messages => {
       this.welcomeMessages = messages;
     });

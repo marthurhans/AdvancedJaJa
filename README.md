@@ -36,4 +36,5 @@ Added resource bundles, multithreaded welcome message, backend endpoint, CORS co
 ### TASK B2
 Added currency display for USD, CAD, and EUR to room listings.
 
-
+### TASK B3a
+Added TimeZoneController and TimeZoneFormatter class
