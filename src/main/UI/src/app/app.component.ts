@@ -20,8 +20,7 @@ export class AppComponent implements OnInit{
   private baseURL:string='http://localhost:8080';
   public welcomeMessages: string[] = [];
   public currencyCodes: string[] = ['USD', 'CAD', 'EUR'];
-  public timezones: any = {};
-
+  public livePresentationMessage: string = '';
   private getUrl:string = this.baseURL + '/room/reservation/v1/';
   private postUrl:string = this.baseURL + '/room/reservation/v1';
   public submitted!:boolean;
@@ -46,10 +45,16 @@ export class AppComponent implements OnInit{
       this.currentCheckInVal = x.checkin;
       this.currentCheckOutVal = x.checkout;
     });
+
     this.httpClient.get<string[]>(`${this.baseURL}/api/welcome`)
     .subscribe(messages => {
       this.welcomeMessages = messages;
     });
+
+    this.httpClient.get<string>(`${this.baseURL}/api/live-presentation`, { responseType: 'text' as 'json' })
+      .subscribe(message => {
+        this.livePresentationMessage = message;
+      });
   }
 
     onSubmit({value,valid}:{value:Roomsearch,valid:boolean}){

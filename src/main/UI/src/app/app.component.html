@@ -63,6 +63,11 @@
     <article class="content">
       <div class="row">
         <div class="" col-12>
+          <div class="live-presentation">
+            <p *ngFor="let line of livePresentationMessage.split('\n')">
+              {{ line }}
+            </p>
+          </div>
           <div class="gallery">
             <img
               src="assets/images/intro_room.jpg"

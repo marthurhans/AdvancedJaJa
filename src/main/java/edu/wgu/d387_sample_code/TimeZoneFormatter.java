@@ -3,6 +3,8 @@ package edu.wgu.d387_sample_code;
 import java.time.ZonedDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
+import java.util.Locale;
 
 public class TimeZoneFormatter {
 
@@ -28,6 +30,13 @@ public class TimeZoneFormatter {
 
     public String getUtcTime() {
         return utcTime;
+    }
+
+    public String getLivePresentationMessage() {
+        return "Our live presentation from the Landon Hotel is happening now:\n" +
+                "Eastern Time: " + easternTime + "\n" +
+                "Mountain Time: " + mountainTime + "\n" +
+                "UTC Time: " + utcTime;
     }
 }
 

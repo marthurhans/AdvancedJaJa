@@ -8,17 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/timezones")
+@RequestMapping("/api")
 public class TimeZoneController {
 
     private final TimeZoneFormatter timeZoneFormatter = new TimeZoneFormatter();
 
-    @GetMapping
-    public Map<String, String> getTimeZones() {
-        Map<String, String> timeZones = new HashMap<>();
-        timeZones.put("Eastern Time", timeZoneFormatter.getEasternTime());
-        timeZones.put("Mountain Time", timeZoneFormatter.getMountainTime());
-        timeZones.put("UTC Time", timeZoneFormatter.getUtcTime());
-        return timeZones;
+    @GetMapping("/live-presentation")
+    public String getLivePresentationMessage() {
+        return timeZoneFormatter.getLivePresentationMessage();
     }
 }
