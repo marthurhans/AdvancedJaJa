@@ -34,7 +34,6 @@ public class H2Bootstrap implements CommandLineRunner {
 
 		roomRepository.save(room3);
 
-		
 		Iterable<RoomEntity> itr = roomRepository.findAll();
 		
 		System.out.println("Printing out data: ");
