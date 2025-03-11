@@ -41,3 +41,6 @@ Added TimeZoneController and TimeZoneFormatter class.
 
 ### TASK B3b
 Added live presentation message logic to both front and backend.
+
+### TASK C1
+Added Dockerfile. 
