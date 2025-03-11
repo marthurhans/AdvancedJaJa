@@ -44,3 +44,9 @@ Added live presentation message logic to both front and backend.
 
 ### TASK C1
 Added Dockerfile. 
+
+### TASK C2
+Tested and successfully ran the app from the Docker image.
+
+### TASK C3
+Created documentation describing and showing all the steps needed to upload image to Docker Hub. 
